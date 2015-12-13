@@ -1,0 +1,5 @@
+"presidents" : [
+    { "name": "Washington", "firstname": "George", "born": "1732", "death": "1799" },
+    { "name": "Lincoln", "firstname": "Abraham", "born": "1809", "death": "1865" }
+    { "name": "Reiher", "firstname": "Jen", "born": "1984", "death": "2085" }
+]
