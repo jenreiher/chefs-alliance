@@ -3,18 +3,18 @@
 	<ul id="anchor"></ul>
 </body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js"></script>  // ➊
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-<script id="president-template" type="text/template">  // ➋
+<script id="president-template" type="text/template">
 	{{#presidents}}
 		<li>{{name}} ({{born}}-{{death}})</li>
 	{{/presidents}}
 </script>
 
-<script> // ➌
+<script>
 	$(function() {
-		$.getJSON('/template/presidents.json', function(data) {
+		$.getJSON('https://rawgit.com/jenreiher/chefs-alliance/master/source/data.json', function(data) {
 		    var template = $('#president-template').html();
 		    var info = Mustache.to_html(template, data);
 		    $('#anchor').html(info);
